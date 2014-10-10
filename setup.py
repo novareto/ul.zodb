@@ -14,8 +14,15 @@ version = '1.0'
 long_description = read('README.txt') + '\n' + read('HISTORY.txt')
 
 install_requires = [
-     "transaction",
-     "ul.browser",
+    "transaction",
+    "ul.browser",
+    "ul.content",
+    "cromlech.zodb",
+    "persistent",
+    "zope.annotation",
+    "zope.component",
+    "zope.event",
+    "zope.location",
     ]
 
 tests_require = [
