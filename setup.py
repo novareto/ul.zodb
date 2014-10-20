@@ -14,11 +14,12 @@ version = '1.0'
 long_description = read('README.txt') + '\n' + read('HISTORY.txt')
 
 install_requires = [
+    "cromlech.zodb",
+    "dolmen.container",
+    "persistent",
     "transaction",
     "ul.browser",
     "ul.content",
-    "cromlech.zodb",
-    "persistent",
     "zope.annotation",
     "zope.component",
     "zope.event",
