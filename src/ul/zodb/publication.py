@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import cromlech.zodb
-from ul.browser import Publication
+from .utils import make_application
 from cromlech.zodb import Site, get_site
 from cromlech.zodb.middleware import ZODBApp
 from cromlech.zodb.utils import init_db
-from zope.component.interfaces import ISite, IPossibleSite
+from ul.browser import Publication
 from ul.browser.decorators import with_zcml, with_i18n
+from zope.component.interfaces import ISite, IPossibleSite
 
 
 class ZODBPublication(Publication):
@@ -17,7 +18,7 @@ class ZODBPublication(Publication):
     @with_zcml('zcml_file')
     @with_i18n('langs', fallback='en')
     def create(cls, gc, session_key='session.key', environ_key='zodb.key',
-               conf=None, name='app', root=None):
+               conf=None, name='app', root=None, **kws):
         if root is None:
             root = cls.root
         db = init_db(conf, make_application(name, root))

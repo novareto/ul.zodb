@@ -15,6 +15,9 @@ long_description = read('README.txt') + '\n' + read('HISTORY.txt')
 
 install_requires = [
     "cromlech.zodb",
+    "setuptools",
+    "cromlech.zodb",
+    "dolmen.container",
     "persistent",
     "transaction",
     "ul.browser",

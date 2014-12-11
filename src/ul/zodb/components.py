@@ -3,8 +3,10 @@
 from cromlech.zodb import PossibleSite
 from persistent import Persistent
 from ul.content import components
+from zope.interface import implementer
 from zope.annotation.interfaces import IAttributeAnnotatable
 from zope.location import Location
+from dolmen.container.components import BTreeContainer
 
 
 @implementer(IAttributeAnnotatable)
